@@ -1,0 +1,1 @@
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\Wordle2023.csproj;x64
