@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rbw+kL/+cJnZigxUXv/t7iGsrhXkfNok3OVkos1whrcuXA832HMQXtjLhDNSZuWdyaVbaJZ6Dos59PDJWaVhJg==",
+  "dgSpecHash": "7KTovjpFgQllLoX4MJbJpa2++MSRY4qV0b0U0PBcmIDGBr8FvPEEKsE4SsaRcBw+Yi+N3pWtaRbXU8gRTQ5xow==",
   "success": true,
   "projectFilePath": "C:\\Users\\radek\\Desktop\\Wordle2023\\Wordle2023\\Wordle2023\\Wordle2023.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\radek\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\radek\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\radek\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\radek\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
+using Wordle2023.GameView;
 
 namespace Wordle2023
 {
@@ -15,9 +16,8 @@ namespace Wordle2023
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+            builder.Services.AddTransient<GameViewModel>();
+            builder.Services.AddTransient<MainPage>();
 
             return builder.Build();
         }

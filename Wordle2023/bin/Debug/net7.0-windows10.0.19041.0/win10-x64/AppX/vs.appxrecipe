@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-02T18:03:36.926</Modified>
+      <Modified>2024-01-02T21:57:02.052</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-02T18:03:36.577</Modified>
+      <Modified>2024-01-02T21:57:01.753</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle2023.runtimeconfig.json">
       <PackagePath>Wordle2023.runtimeconfig.json</PackagePath>
-      <Modified>2024-01-02T18:03:36.344</Modified>
+      <Modified>2024-01-02T20:41:10.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle2023.dll">
       <PackagePath>Wordle2023.dll</PackagePath>
-      <Modified>2024-01-02T18:03:34.870</Modified>
+      <Modified>2024-01-02T21:57:00.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wordle2023.exe</PackagePath>
-      <Modified>2024-01-02T18:03:34.883</Modified>
+      <Modified>2024-01-02T21:57:00.378</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle2023.deps.json">
       <PackagePath>Wordle2023.deps.json</PackagePath>
-      <Modified>2024-01-02T18:03:36.228</Modified>
+      <Modified>2024-01-02T21:57:01.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.14\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -808,6 +808,10 @@
     <AppxPackagedFile Include="C:\Users\radek\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-10-16T19:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2023-10-24T20:16:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
