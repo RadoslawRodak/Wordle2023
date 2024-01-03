@@ -38,33 +38,34 @@ public partial class GameViewModel : ObservableObject
         correctWord = "DONNY".ToCharArray();
         keyboard1 = "QWERTYUIOP".ToCharArray();
         keyboard2 = "ASDFGHJKL".ToCharArray();
-        keyboard3 = "<ZXCVBNM>".ToCharArray();
-        
-       
+        keyboard3 = "<ZXCVBNM>".ToCharArray();           
     }
 
     public void Enter()
     {
-        if(columnsIndex != 4)
-        {
+        if(columnsIndex != 5)
             return;
-        }
-       
 
-        var valid = true;
 
-        if (valid)
+        var answer = Rows[rowsIndex].Validate(correctWord);
+
+        if (answer)
         {
-            if (rowsIndex == 5)
-            {
-                // Game over
-            }
-            else
-            {
-                rowsIndex++;
-                columnsIndex = 0;
-            }
+            App.Current.MainPage.DisplayAlert("You Win", "You Win", "OK");
+            return;  
         }
+
+        if(rowsIndex == 5)
+        {
+            App.Current.MainPage.DisplayAlert("Game Over", "Out of Turns", "OK");
+        }
+
+        else
+        {
+            rowsIndex++;
+            columnsIndex = 0;
+        }
+
     }
 
     [RelayCommand]
@@ -78,6 +79,11 @@ public partial class GameViewModel : ObservableObject
 
         if(letter == '<')
         {
+            if(columnsIndex == 0)            
+                return;
+            columnsIndex--;
+                Rows[rowsIndex].Letters[columnsIndex].Input = ' ';
+
             return;
         }
 
