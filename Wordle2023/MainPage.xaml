@@ -7,28 +7,70 @@
              xmlns:model="clr-namespace:Wordle2023.Model"
              x:DataType="viewmodel:GameViewModel">
 
-    <Grid RowDefinitions="*, Auto">
+    <Grid RowDefinitions="*, Auto"
+          Padding="10">
         <!-- Game Grid-->
         <VerticalStackLayout
             BindableLayout.ItemsSource="{Binding Rows}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate x:DataType="model:WordRows">
                     <HorizontalStackLayout
+                        HorizontalOptions="Center"
                         BindableLayout.ItemsSource="{Binding Letters}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="model:Letter">
-                                <Frame BorderColor="LightGray">
-                                    
+                                <Frame Style="{DynamicResource LetterFrame}"
+                                        BackgroundColor="{Binding Color}"
+                                        Margin="1">
+                                    <Label Text="{Binding Input}"
+                                           FontSize="Large"
+                                           />
                                 </Frame>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
                     </HorizontalStackLayout>
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
-             
         </VerticalStackLayout>
-        
-        
+
+        <VerticalStackLayout Grid.Row="1">
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                BindableLayout.ItemsSource="{Binding keyboard1}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Null}">
+                        <Button Style="{DynamicResource LetterButton}"
+                                Text="{Binding .}"
+                                Command="{Binding EnterLetterCommand}"
+                                CommandParameter="{Binding .}"/>    
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                BindableLayout.ItemsSource="{Binding keyboard2}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="{x:Null}">
+                            <Button Style="{DynamicResource LetterButton}"
+                                Text="{Binding .}"
+                                Command="{Binding EnterLetterCommand}"
+                                CommandParameter="{Binding .}"/>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </HorizontalStackLayout>
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                BindableLayout.ItemsSource="{Binding keyboard3}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="{x:Null}">
+                                <Button Style="{DynamicResource LetterButton}"
+                                Text="{Binding .}"
+                                Command="{Binding EnterLetterCommand}"
+                                CommandParameter="{Binding .}"/>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </HorizontalStackLayout>    
+        </VerticalStackLayout>
         <!-- Keyboard-->
     </Grid>
     

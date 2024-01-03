@@ -9,8 +9,9 @@ namespace Wordle2023
         {
             InitializeComponent();
             BindingContext = viewModel;
+            var frame = new Frame();
+            
         }
-
     }
 
 }

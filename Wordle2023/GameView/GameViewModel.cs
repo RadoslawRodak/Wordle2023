@@ -15,6 +15,10 @@ public partial class GameViewModel : ObservableObject
 
     char[] correctWord;
 
+    public char[] keyboard1 { get; }
+    public char[] keyboard2 { get; }
+    public char[] keyboard3 { get; }
+
     [ObservableProperty]
     private WordRows[] rows;
 
@@ -32,10 +36,13 @@ public partial class GameViewModel : ObservableObject
         };
 
         correctWord = "DONNY".ToCharArray();
+        keyboard1 = "QWERTYUIOP".ToCharArray();
+        keyboard2 = "ASDFGHJKL".ToCharArray();
+        keyboard3 = "<ZXCVBNM>".ToCharArray();
+        
        
     }
 
-    [RelayCommand]
     public void Enter()
     {
         if(columnsIndex != 4)
@@ -63,12 +70,24 @@ public partial class GameViewModel : ObservableObject
     [RelayCommand]
     public void EnterLetter(char letter)
     {
+        if(letter == '>')
+        {
+            Enter();
+            return;
+        }
+
+        if(letter == '<')
+        {
+            return;
+        }
 
         if(columnsIndex == 5)
         {
             return;
         }
-       
+
+        Rows[rowsIndex].Letters[columnsIndex].Input = letter;
+        columnsIndex++;
     }
 
 }
