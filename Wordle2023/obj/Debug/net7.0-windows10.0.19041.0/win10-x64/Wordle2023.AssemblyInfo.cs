@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wordle2023")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+ee5270a49cd6de557d1e1d8454f499388465ebf4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+11374a94b33325c96a2566eaf80c5b810201dfe2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wordle2023")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wordle2023")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -64,6 +64,8 @@ public partial class GameViewModel : ObservableObject
         {
             rowsIndex++;
             columnsIndex = 0;
+
+            
         }
 
     }
@@ -86,6 +88,9 @@ public partial class GameViewModel : ObservableObject
 
             return;
         }
+
+
+
 
         if(columnsIndex == 5)
         {

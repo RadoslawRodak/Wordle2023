@@ -6,8 +6,14 @@
              xmlns:viewmodel="clr-namespace:Wordle2023.GameView"
              xmlns:model="clr-namespace:Wordle2023.Model"
              x:DataType="viewmodel:GameViewModel">
-
-    <Grid RowDefinitions="*, Auto"
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light=settings.png, Dark=settingsdark.png}" Clicked="Settings_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    
+    
+    <Grid x:Name="WordleGrid"
+          RowDefinitions="*, Auto"
           Padding="10"
           >
         <!-- Game Grid-->
@@ -19,11 +25,11 @@
                         HorizontalOptions="Center"
                         BindableLayout.ItemsSource="{Binding Letters}">
                         <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="model:Letter">
-                                <Frame Style="{DynamicResource LetterFrame}"
+                        <DataTemplate x:DataType="model:Letter">
+                            <Frame Style="{DynamicResource LetterFrame}"
                                        BackgroundColor="{Binding Color}"
                                         Margin="1">
-                                    <Label Text="{Binding Input}"
+                                <Label Text="{Binding Input}"
                                            FontSize="35"
                                            HorizontalOptions="Center"
                                            VerticalOptions="Center"
@@ -37,16 +43,22 @@
         </VerticalStackLayout>
 
         <VerticalStackLayout Grid.Row="1" Spacing="2">
-            <HorizontalStackLayout
-                Spacing="2"
-                HorizontalOptions="Center"
-                BindableLayout.ItemsSource="{Binding keyboard1}">
+            <HorizontalStackLayout Spacing="2" HorizontalOptions="Center" BindableLayout.ItemsSource="{Binding keyboard1}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="{x:Null}">
-                        <Button Style="{DynamicResource LetterButton}"
-                                Text="{Binding .}"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path=EnterLetterCommand}"
-                                CommandParameter="{Binding .}"/>    
+                        <Button Style="{DynamicResource LetterButton}" Text="{Binding .}"
+                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path=EnterLetterCommand}"
+                    CommandParameter="{Binding .}">
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button" Binding="{Binding IsCorrect}" Value="True">
+                                    <Setter Property="BackgroundColor" Value="Green"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Button" Binding="{Binding IsCorrect}" Value="False">
+                                    <Setter Property="BackgroundColor" Value="Gray"/>
+                                </DataTrigger>
+
+                            </Button.Triggers>
+                        </Button>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
             </HorizontalStackLayout>

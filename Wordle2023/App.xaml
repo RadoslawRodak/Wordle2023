@@ -32,6 +32,7 @@
                 <Setter Property="WidthRequest" Value="35"/>
                 <Setter Property="HeightRequest" Value="50"/>
                 <Setter Property="Padding" Value="4" />
+
             </Style>
 
         </ResourceDictionary>
