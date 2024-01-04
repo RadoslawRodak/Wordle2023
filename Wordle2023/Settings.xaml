@@ -23,6 +23,8 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Clicked="DarkMode_Clicked"/>
+        
+        
        
         
      

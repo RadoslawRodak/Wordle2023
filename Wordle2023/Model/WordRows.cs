@@ -1,9 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.Maui.Controls;
+
 
 namespace Wordle2023.Model;
 
 public class WordRows
 {
+   
 
     public WordRows()
     {
@@ -16,6 +19,10 @@ public class WordRows
             new Letter()
 
         };
+
+        
+        
+
     }
     public Letter[] Letters { get; set; }
 
@@ -33,12 +40,14 @@ public class WordRows
             {
                 letter.Color = Colors.Green;
                 letter.IsCorrect = true;
+                
                 count++;
             }
             else if (correctWord.Contains(letter.Input))
             {
                 letter.Color = Colors.Yellow;
                 letter.IsCorrect = false;
+
             }
             else
             {
@@ -46,9 +55,13 @@ public class WordRows
                 letter.IsCorrect = false;
             }
         }
+       
 
         return count == 5;
     }
+
+
+   
 
 }
 
@@ -63,11 +76,11 @@ public partial class Letter : ObservableObject
         get { return isCorrect; }
         set { SetProperty(ref isCorrect, value); }
     }
+
+   
     public Letter()
     {
-        //change color depending on light or dark mode
-        color = Colors.White;
-
+        
     }
     [ObservableProperty]
     private char input;

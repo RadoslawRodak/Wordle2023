@@ -5,14 +5,13 @@ namespace Wordle2023
 
     public partial class MainPage : ContentPage
     {
-        
         public MainPage(GameViewModel viewModel)
         {
             InitializeComponent();
             BindingContext = viewModel;
             var frame = new Frame();
-           
 
+           
         }
 
 
@@ -21,4 +20,8 @@ namespace Wordle2023
             await Navigation.PushAsync(new Settings());
         }
     }
+
+   
+
+   
 }

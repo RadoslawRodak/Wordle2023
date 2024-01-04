@@ -24,7 +24,7 @@
 
             <Style x:Key="LetterButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource ThirdColor}" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BorderColor" Value="DarkGray"/>
                 <Setter Property="BorderWidth" Value="2"/>

@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.Maui.Controls;
+using System.Collections.ObjectModel;
+using System.Linq;
 using Wordle2023.Model;
 
 namespace Wordle2023.GameView;
@@ -22,9 +25,16 @@ public partial class GameViewModel : ObservableObject
     [ObservableProperty]
     private WordRows[] rows;
 
+    private ObservableCollection<Color> keyboard1Colors;
+    public ObservableCollection<Color> Keyboard1Colors
+    {
+        get { return keyboard1Colors; }
+        set { SetProperty(ref keyboard1Colors, value); }
+    }
+
     public GameViewModel()
     {
-       rows = new WordRows[6]
+        rows = new WordRows[6]
         {
             new WordRows(),
             new WordRows(),
@@ -32,13 +42,16 @@ public partial class GameViewModel : ObservableObject
             new WordRows(),
             new WordRows(),
             new WordRows()
-
+            
         };
 
         correctWord = "DONNY".ToCharArray();
         keyboard1 = "QWERTYUIOP".ToCharArray();
         keyboard2 = "ASDFGHJKL".ToCharArray();
-        keyboard3 = "<ZXCVBNM>".ToCharArray();           
+        keyboard3 = "<ZXCVBNM>".ToCharArray();
+
+        // Initialize colors for keyboard1
+        Keyboard1Colors = new ObservableCollection<Color>(keyboard1.Select(_ => Color.FromRgb(0,0,0)));
     }
 
     public void Enter()
@@ -64,8 +77,6 @@ public partial class GameViewModel : ObservableObject
         {
             rowsIndex++;
             columnsIndex = 0;
-
-            
         }
 
     }
@@ -96,7 +107,7 @@ public partial class GameViewModel : ObservableObject
         {
             return;
         }
-
+        
         Rows[rowsIndex].Letters[columnsIndex].Input = letter;
         columnsIndex++;
     }
