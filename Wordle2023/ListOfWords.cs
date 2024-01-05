@@ -57,6 +57,12 @@ namespace Wordle2023
 
 
         }
+
+        public bool WordExists(string wordToCheck)
+        {
+            // Check if the given word exists in the list
+            return words.Contains(wordToCheck);
+        }
     }
 }
 

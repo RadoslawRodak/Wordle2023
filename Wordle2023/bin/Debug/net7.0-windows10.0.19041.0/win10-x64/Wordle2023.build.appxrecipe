@@ -910,6 +910,21 @@
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settingsdark.scale-400.png">
       <PackagePath>settingsdark.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-100.png">
+      <PackagePath>statistics.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-125.png">
+      <PackagePath>statistics.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-150.png">
+      <PackagePath>statistics.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-200.png">
+      <PackagePath>statistics.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-400.png">
+      <PackagePath>statistics.scale-400.png</PackagePath>
+    </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Users\radek\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">
