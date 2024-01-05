@@ -67,29 +67,7 @@ public partial class GameViewModel : ObservableObject
         Word = list.GenerateRandomWord().ToCharArray();
         
     }
-    public void Enter()
-    {
-        if (columnsIndex != 5)
-            return;
-
-        var answer = Rows[rowsIndex].Validate(Word);
-       
-        if (answer)
-        {
-            App.Current.MainPage.DisplayAlert("You Win", "You Win", "OK");
-            return;
-        }
-
-        if (rowsIndex == 5)
-        {
-            App.Current.MainPage.DisplayAlert("Game Over", "Out of Turns", "OK");
-        }
-        else
-        {
-            rowsIndex++;
-            columnsIndex = 0;
-        }
-    }
+    
 
     [RelayCommand]
     public void EnterLetter(char letter)
@@ -122,4 +100,57 @@ public partial class GameViewModel : ObservableObject
         columnsIndex++;
     }
 
+    private void ResetGame()
+    {
+        rowsIndex = 0;
+        columnsIndex = 0;
+        newWord = true;
+
+        // Reset the Letters in each row
+        foreach (var row in Rows)
+        {
+            for (int i = 0; i < row.Letters.Length; i++)
+            {
+                row.Letters[i].Input = ' ';
+                row.Letters[i].Color = Colors.White; // Set to the default color (you may have a specific color for default state)
+                row.Letters[i].IsCorrect = false;
+            }
+        }
+
+        GenerateWord();
+
+        // Notify UI that properties have changed
+        OnPropertyChanged(nameof(Rows));
+        OnPropertyChanged(nameof(Word));
+    }
+
+    private void HandleGameEnd(string title, string message)
+    {
+        App.Current.MainPage.DisplayAlert(title, message, "OK");
+        ResetGame();
+    }
+
+    public void Enter()
+    {
+        if (columnsIndex != 5)
+            return;
+
+        var answer = Rows[rowsIndex].Validate(Word);
+
+        if (answer)
+        {
+            HandleGameEnd("You Win", "You Win");
+            return;
+        }
+
+        if (rowsIndex == 5) 
+        {
+            HandleGameEnd("Game Over", "Out of Turns");
+        }
+        else
+        {
+            rowsIndex++;
+            columnsIndex = 0;
+        }
+    }
 }

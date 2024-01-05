@@ -67,9 +67,6 @@ public class WordRows : ObservableObject
         return count == 5;
     }
 
-
-
-
 }
 
 public partial class Letter : ObservableObject

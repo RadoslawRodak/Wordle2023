@@ -48,10 +48,9 @@
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="{x:Null}">
                         <Button Style="{DynamicResource LetterButton}" Text="{Binding .}"
-                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path=EnterLetterCommand}"
-                    CommandParameter="{Binding .}">
+            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:GameViewModel}}, Path=EnterLetterCommand}"
+            CommandParameter="{Binding .}">
                             <Button.Triggers>
-
                                 <DataTrigger TargetType="Button" Binding="{Binding IsCorrect}" Value="True">
                                     <Setter Property="BackgroundColor" Value="Green"/>
                                 </DataTrigger>
