@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Controls;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Wordle2023.Model;
@@ -9,14 +10,15 @@ namespace Wordle2023.GameView;
 
 public partial class GameViewModel : ObservableObject
 {
+    ListOfWords list;
 
     //0 - 5
     int rowsIndex;
 
     //0 - 4
     int columnsIndex;
+ 
 
-    char[] correctWord;
 
     public char[] keyboard1 { get; }
     public char[] keyboard2 { get; }
@@ -25,15 +27,9 @@ public partial class GameViewModel : ObservableObject
     [ObservableProperty]
     private WordRows[] rows;
 
-    private ObservableCollection<Color> keyboard1Colors;
-    public ObservableCollection<Color> Keyboard1Colors
-    {
-        get { return keyboard1Colors; }
-        set { SetProperty(ref keyboard1Colors, value); }
-    }
-
     public GameViewModel()
     {
+        list = new ListOfWords();
         rows = new WordRows[6]
         {
             new WordRows(),
@@ -45,40 +41,54 @@ public partial class GameViewModel : ObservableObject
             
         };
 
-        correctWord = "DONNY".ToCharArray();
-        keyboard1 = "QWERTYUIOP".ToCharArray();
-        keyboard2 = "ASDFGHJKL".ToCharArray();
-        keyboard3 = "<ZXCVBNM>".ToCharArray();
+       
+         keyboard1 = "QWERTYUIOP".ToCharArray();
+         keyboard2 = "ASDFGHJKL".ToCharArray();
+         keyboard3 = "<ZXCVBNM>".ToCharArray();
+       
 
-        // Initialize colors for keyboard1
-        Keyboard1Colors = new ObservableCollection<Color>(keyboard1.Select(_ => Color.FromRgb(0,0,0)));
+        InitializeAsync();
+       
+        
     }
 
+    private async void InitializeAsync()
+    {
+        await list.getWordList();
+        GenerateWord();
+        await App.Current.MainPage.DisplayAlert("Generated Word", $"The generated word is: {new string(Word)}", "OK");
+    }
+
+    public bool newWord = true;
+    public char[] Word;
+
+    public async void GenerateWord()
+    {
+        Word = list.GenerateRandomWord().ToCharArray();
+        
+    }
     public void Enter()
     {
-        if(columnsIndex != 5)
+        if (columnsIndex != 5)
             return;
 
-
-        var answer = Rows[rowsIndex].Validate(correctWord);
-
+        var answer = Rows[rowsIndex].Validate(Word);
+       
         if (answer)
         {
             App.Current.MainPage.DisplayAlert("You Win", "You Win", "OK");
-            return;  
+            return;
         }
 
-        if(rowsIndex == 5)
+        if (rowsIndex == 5)
         {
             App.Current.MainPage.DisplayAlert("Game Over", "Out of Turns", "OK");
         }
-
         else
         {
             rowsIndex++;
             columnsIndex = 0;
         }
-
     }
 
     [RelayCommand]
@@ -100,10 +110,10 @@ public partial class GameViewModel : ObservableObject
             return;
         }
 
+       
 
 
-
-        if(columnsIndex == 5)
+        if (columnsIndex == 5)
         {
             return;
         }
