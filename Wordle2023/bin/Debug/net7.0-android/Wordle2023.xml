@@ -7,6 +7,7 @@
         <member name="T:Wordle2023.GameView.GameViewModel">
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:Wordle2023.GameView.GameViewModel.Rows">
             <inheritdoc cref="F:Wordle2023.GameView.GameViewModel.rows"/>
@@ -17,14 +18,11 @@
         <member name="P:Wordle2023.GameView.GameViewModel.EnterLetterCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:Wordle2023.GameView.GameViewModel.EnterLetter(System.Char)"/>.</summary>
         </member>
-        <member name="T:Wordle2023.Model.Letter">
-            <inheritdoc/>
+        <member name="F:Wordle2023.GameView.GameViewModel.enterCommand">
+            <summary>The backing field for <see cref="P:Wordle2023.GameView.GameViewModel.EnterCommand"/>.</summary>
         </member>
-        <member name="P:Wordle2023.Model.Letter.Input">
-            <inheritdoc cref="F:Wordle2023.Model.Letter.input"/>
-        </member>
-        <member name="P:Wordle2023.Model.Letter.Color">
-            <inheritdoc cref="F:Wordle2023.Model.Letter.color"/>
+        <member name="P:Wordle2023.GameView.GameViewModel.EnterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:Wordle2023.GameView.GameViewModel.Enter"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
@@ -35,12 +33,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Rows">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Rows" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Input">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Input" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Color">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Color" generated properties.</summary>
-        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -49,12 +41,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Rows">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Rows" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Input">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Input" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Color">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Color" generated properties.</summary>
         </member>
     </members>
 </doc>

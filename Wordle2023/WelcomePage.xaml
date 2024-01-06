@@ -8,9 +8,8 @@
             <Border WidthRequest="300" HeightRequest="300"
                 BackgroundColor="White"
                 HorizontalOptions="Center">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="40,0,0,40"/>
-                </Border.StrokeShape>
+               
+                
                 <VerticalStackLayout Spacing="3">
                     <Entry
                     x:Name="UsernameEntry"

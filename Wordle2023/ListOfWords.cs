@@ -14,6 +14,7 @@ namespace Wordle2023
     {
         List<string> words = new List<string>();
         HttpClient httpClient;
+        private Random random = new Random();
         string savedfilelocation = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "words.txt");
 
         public async Task getWordList()

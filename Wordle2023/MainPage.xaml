@@ -11,8 +11,13 @@
         <ToolbarItem IconImageSource="{AppThemeBinding Light=settings.png, Dark=settingsdark.png}" Clicked="Settings_Clicked"/>
     </ContentPage.ToolbarItems>
 
-    <Grid x:Name="WordleGrid" RowDefinitions="*, Auto" Padding="10">
-        <!-- Game Grid-->
+    <Grid x:Name="WordleGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
         <VerticalStackLayout BindableLayout.ItemsSource="{Binding Rows}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate x:DataType="model:WordRows">
@@ -28,6 +33,7 @@
                 </DataTemplate>
             </BindableLayout.ItemTemplate>
         </VerticalStackLayout>
+    </ScrollView>
 
         <!-- Keyboard-->
         <VerticalStackLayout Grid.Row="1" Spacing="2">
