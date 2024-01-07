@@ -6,14 +6,14 @@
              >
     <Grid>
         <!-- Set the background image -->
-        <Image Source="helppage.jpg" Aspect="Fill" />
+        <Image Source="helppage.jpg" Aspect="AspectFill" />
 
         <VerticalStackLayout>
             <!-- Your existing content goes here -->
 
             <Label FontAttributes="Bold" Text="How To Play Wordle" VerticalOptions="Center" HorizontalOptions="Center" FontSize="50" TextColor="White" Padding="15"/>
             <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="525">
-            <Label FontAttributes="Bold" Text="Each guess must be a valid 5-Letter word" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25" TextColor="Black"/>
+                <Label LineBreakMode="WordWrap"  FontAttributes="Bold" Text="Each guess must be a valid 5-Letter word" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25" TextColor="Black"/>
             </Frame>
             <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="975" Margin="10">
             <Label FontAttributes="Bold" Text="The color of the tiles will change to show how close your guess was to the word." VerticalOptions="Fill" HorizontalOptions="Center"

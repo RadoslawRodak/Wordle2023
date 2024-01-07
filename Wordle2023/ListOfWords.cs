@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.IO;
-
-
+﻿
 namespace Wordle2023 
 {
 
@@ -14,7 +6,6 @@ namespace Wordle2023
     {
         List<string> words = new List<string>();
         HttpClient httpClient;
-        private Random random = new Random();
         string savedfilelocation = System.IO.Path.Combine(FileSystem.Current.AppDataDirectory, "words.txt");
 
         public async Task getWordList()
@@ -46,8 +37,10 @@ namespace Wordle2023
             using (var httpClient = new HttpClient())
             {
                 var responseStream = await httpClient.GetStreamAsync("https://raw.githubusercontent.com/DonH-ITS/jsonfiles/main/words.txt");
-                using var fileStream = new FileStream(savedfilelocation, FileMode.Create);
-                responseStream.CopyToAsync(fileStream);
+                using (var fileStream = new FileStream(savedfilelocation, FileMode.Create))
+                {
+                    await responseStream.CopyToAsync(fileStream);
+                }
             }
         }
         public String GenerateRandomWord()

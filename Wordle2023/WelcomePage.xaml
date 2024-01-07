@@ -2,34 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wordle2023.WelcomePage"
-             Title="Wordle">
+             Title="Wordle"
+             BackgroundColor="White"             
+             >
+    <Grid>
 
+        <VerticalStackLayout >
+            <Image Source="wordle_logo.jpg" HorizontalOptions="Center" Aspect="AspectFit" HeightRequest="600" Margin="1,1"/>
+        </VerticalStackLayout>
 
-
-    <VerticalStackLayout>
-        <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
-            <Border WidthRequest="300" HeightRequest="150"
+        <VerticalStackLayout>
+            <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+                <Border WidthRequest="300" HeightRequest="150"
                 BackgroundColor="White"
                 HorizontalOptions="Center">
 
 
-                <VerticalStackLayout Spacing="3">
-                    <Entry
+                    <VerticalStackLayout Spacing="3">
+                        <Entry
                     x:Name="UsernameEntry"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Placeholder="Username"
-                     TextColor="Black"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"              
                         BackgroundColor="White"
                         WidthRequest="100"
                      />
 
 
-                    <Button
+                        <Button
                     x:Name="LoginButton"
+                            Padding="10,5"
                     Margin="10,5"
-                    HorizontalOptions="Fill"
-                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
                     Text="Login"
                         
                     WidthRequest="100"
@@ -37,14 +44,11 @@
                     TextColor="White"
                     BackgroundColor="Black"
                     Clicked="LoginButton_Clicked">
-                    </Button>
-                </VerticalStackLayout>
-            </Border>
-        </ScrollView>
-        
-        <VerticalStackLayout >
-            <Image Source="wordle_logo.jpg" HorizontalOptions="Center" Aspect="Center" HeightRequest="450" Margin="1,1"/>
-       </VerticalStackLayout>
-    
-    </VerticalStackLayout>
+                        </Button>
+                    </VerticalStackLayout>
+                </Border>
+            </ScrollView>
+
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

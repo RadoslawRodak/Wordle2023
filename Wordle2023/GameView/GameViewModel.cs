@@ -12,6 +12,7 @@ namespace Wordle2023.GameView
 {
     public partial class GameViewModel : ObservableObject
     {
+        //load the list of words
         ListOfWords list;
         int rowsIndex;
         int columnsIndex;
