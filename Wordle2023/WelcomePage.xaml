@@ -2,20 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wordle2023.WelcomePage"
-             Title="WelcomePage">
+             Title="Wordle">
+
+
+
     <VerticalStackLayout>
         <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
-            <Border WidthRequest="300" HeightRequest="300"
+            <Border WidthRequest="300" HeightRequest="150"
                 BackgroundColor="White"
                 HorizontalOptions="Center">
-               
-                
+
+
                 <VerticalStackLayout Spacing="3">
                     <Entry
                     x:Name="UsernameEntry"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    Placeholder="Username" />
+                    Placeholder="Username"
+                     TextColor="Black"
+                        BackgroundColor="White"
+                        WidthRequest="100"
+                     />
+
 
                     <Button
                     x:Name="LoginButton"
@@ -23,11 +31,20 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="EndAndExpand"
                     Text="Login"
+                        
+                    WidthRequest="100"
+                    FontSize="20"
+                    TextColor="White"
+                    BackgroundColor="Black"
                     Clicked="LoginButton_Clicked">
                     </Button>
                 </VerticalStackLayout>
             </Border>
-
         </ScrollView>
+        
+        <VerticalStackLayout >
+            <Image Source="wordle_logo.jpg" HorizontalOptions="Center" Aspect="Center" HeightRequest="450" Margin="1,1"/>
+       </VerticalStackLayout>
+    
     </VerticalStackLayout>
 </ContentPage>

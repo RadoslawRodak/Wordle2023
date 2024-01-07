@@ -9,6 +9,7 @@
             <Color x:Key="PrimaryColor">White</Color>
             <Color x:Key="SecondaryColor">darkGray</Color>
             <Color x:Key="ThirdColor">Black</Color>
+            <Color x:Key="LetterColor">Black</Color>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource ThirdColor}" />
@@ -24,7 +25,7 @@
 
             <Style x:Key="LetterButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource ThirdColor}" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="BackgroundColor" Value="white" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BorderColor" Value="DarkGray"/>
                 <Setter Property="BorderWidth" Value="2"/>

@@ -880,6 +880,30 @@
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\gridmode.scale-100.jpg">
+      <PackagePath>gridmode.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\helpbackground.scale-100.jpg">
+      <PackagePath>helpbackground.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\helppage.scale-100.jpg">
+      <PackagePath>helppage.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-100.png">
+      <PackagePath>question.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-125.png">
+      <PackagePath>question.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-150.png">
+      <PackagePath>question.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-200.png">
+      <PackagePath>question.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-400.png">
+      <PackagePath>question.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png">
       <PackagePath>settings.scale-100.png</PackagePath>
     </AppxPackagedFile>
@@ -924,6 +948,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-400.png">
       <PackagePath>statistics.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\wordleblock.scale-100.jpg">
+      <PackagePath>wordleblock.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\wordle_logo.scale-100.jpg">
+      <PackagePath>wordle_logo.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -59,7 +59,7 @@ namespace Wordle2023.GameView
         }
 
         [RelayCommand]
-        public void EnterLetter(char letter)
+        public async void EnterLetter(char letter)
         {
             if (letter == '>')
             {
@@ -83,13 +83,12 @@ namespace Wordle2023.GameView
                 return;
             }
 
+
             Rows[rowsIndex].Letters[columnsIndex].Input = letter;
             columnsIndex++;
-
-
         }
 
-        private void ResetGame()
+            private void ResetGame()
         {
             rowsIndex = 0;
             columnsIndex = 0;

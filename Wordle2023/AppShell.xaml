@@ -6,12 +6,13 @@
     xmlns:local="clr-namespace:Wordle2023"
     Shell.FlyoutBehavior="Disabled">
 
+    
     <ShellContent
-    Title="Welcome"
+    Title="Wordle"
     ContentTemplate="{DataTemplate local:WelcomePage}"
-    Route="WelcomePage" />
+        Route="WelcomePage" />
     <ShellContent
-        Title="Game"
+        Title="Wordle"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

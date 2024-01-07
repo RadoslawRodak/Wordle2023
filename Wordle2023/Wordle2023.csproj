@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,8 +48,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\gridmode.jpg" />
+	  <None Remove="Resources\Images\helpbackground.jpg" />
+	  <None Remove="Resources\Images\helppage.jpg" />
+	  <None Remove="Resources\Images\question.svg" />
 	  <None Remove="Resources\Images\settings.svg" />
 	  <None Remove="Resources\Images\settingsdark.svg" />
+	  <None Remove="Resources\Images\wordleblock.jpg" />
+	  <None Remove="Resources\Images\Wordle_logo.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -59,6 +64,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="HelpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

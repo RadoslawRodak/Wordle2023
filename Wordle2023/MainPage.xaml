@@ -9,32 +9,36 @@
              xmlns:local="clr-namespace:Wordle2023">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{AppThemeBinding Light=settings.png, Dark=settingsdark.png}" Clicked="Settings_Clicked"/>
+        <ToolbarItem IconImageSource="{AppThemeBinding Light=question.png, Dark=question.png}" Clicked="Help_Clicked"/>
+        
     </ContentPage.ToolbarItems>
 
-    <Grid x:Name="WordleGrid">
+
+    <Grid x:Name="WordleGrid" Padding="1,8,8,5" VerticalOptions="CenterAndExpand">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
-        <VerticalStackLayout BindableLayout.ItemsSource="{Binding Rows}">
-            <BindableLayout.ItemTemplate>
-                <DataTemplate x:DataType="model:WordRows">
-                    <HorizontalStackLayout HorizontalOptions="Center" BindableLayout.ItemsSource="{Binding Letters}">
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="model:Letter">
-                                <Frame Style="{DynamicResource LetterFrame}" BackgroundColor="{Binding Color}" Margin="1">
-                                    <Label Text="{Binding Input}" FontSize="35" HorizontalOptions="Center" VerticalOptions="Center"/>
-                                </Frame>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </HorizontalStackLayout>
-                </DataTemplate>
-            </BindableLayout.ItemTemplate>
-        </VerticalStackLayout>
-    </ScrollView>
+            <VerticalStackLayout BindableLayout.ItemsSource="{Binding Rows}">
 
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="model:WordRows">
+                        <HorizontalStackLayout HorizontalOptions="Center" BindableLayout.ItemsSource="{Binding Letters}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="model:Letter">
+                                    <Frame Style="{DynamicResource LetterFrame}" BackgroundColor="{Binding Color}" Margin="1">
+                                        <Label Text="{Binding Input}" FontSize="35" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                    </Frame>
+
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+        </ScrollView>
         <!-- Keyboard-->
         <VerticalStackLayout Grid.Row="1" Spacing="2">
             <HorizontalStackLayout Spacing="2" HorizontalOptions="Center" BindableLayout.ItemsSource="{Binding keyboard1}">
@@ -77,4 +81,8 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>
+
+    
+        
+    
 </ContentPage>

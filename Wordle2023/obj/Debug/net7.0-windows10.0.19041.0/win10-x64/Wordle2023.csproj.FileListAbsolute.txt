@@ -339,3 +339,13 @@ C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows
 C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-150.png
 C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-200.png
 C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\statistics.scale-400.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-100.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-125.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-150.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-200.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\question.scale-400.png
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\helpbackground.scale-100.jpg
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\wordle_logo.scale-100.jpg
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\wordleblock.scale-100.jpg
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\gridmode.scale-100.jpg
+C:\Users\radek\Desktop\Wordle2023\Wordle2023\Wordle2023\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\helppage.scale-100.jpg

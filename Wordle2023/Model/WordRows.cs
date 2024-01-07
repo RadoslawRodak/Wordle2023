@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Microsoft.Maui.Controls;
-using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 
 namespace Wordle2023.Model;
@@ -48,6 +47,7 @@ public class WordRows : ObservableObject
 
             if (inputUpperCase == expectedUpperCase)
             {
+                
                 letter.Color = Colors.Green;
                 letter.IsCorrect = true;
                 count++;

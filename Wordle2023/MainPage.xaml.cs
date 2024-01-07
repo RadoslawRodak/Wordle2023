@@ -1,5 +1,6 @@
 ﻿using Wordle2023.GameView;
 
+
 namespace Wordle2023
 {
 
@@ -11,7 +12,7 @@ namespace Wordle2023
             BindingContext = viewModel;
             var frame = new Frame();
 
-           
+            
         }
 
         private async void Settings_Clicked(object sender, EventArgs e)
@@ -19,7 +20,12 @@ namespace Wordle2023
             await Navigation.PushAsync(new Settings());
         }
 
-        
+        private async void Help_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HelpPage());
+        }
+
+
     }
 
    

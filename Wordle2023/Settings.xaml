@@ -4,30 +4,46 @@
              x:Class="Wordle2023.Settings"
              Title="Settings"
              BackgroundColor="{DynamicResource PrimaryColor}">
-    <VerticalStackLayout>
-        <Label 
-    Text="Settings"
-    VerticalOptions="Center" 
-    HorizontalOptions="Center"
-    FontSize="Title" />
 
-        <Button Text = "LightMode"
-                Margin="10,5"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Clicked="LightMode_Clicked"
-                />
-                       
-        
-        <Button Text = "DarkMode"
-                Margin="10,5"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Clicked="DarkMode_Clicked"/>
-        
-        
-       
-        
-     
-    </VerticalStackLayout>
+    <!-- Use a Grid to layer the image behind other content -->
+    <Grid>
+        <!-- This Image will act as the background for the page -->
+        <Image Source="gridmode.jpg" Aspect="AspectFill" />
+
+        <!-- Content StackLayout -->
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+            <Border WidthRequest="500" HeightRequest="300"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center">
+
+                <StackLayout Padding="0">
+                    <Button Text="Light Mode"
+                            Margin="20"
+                            FontSize="20"
+                            HeightRequest="50"
+                            WidthRequest="140"
+                            BackgroundColor="White"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Clicked="LightMode_Clicked" />
+
+                    <Button Text="Dark Mode"
+                            Margin="20"
+                            FontSize="20"
+                            TextColor="White"
+                            HeightRequest="50"
+                            WidthRequest="140"
+                            BackgroundColor="black"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Clicked="DarkMode_Clicked"/>
+
+                    <Label x:Name="StoredTextLabel" WidthRequest="350" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold"/>
+
+                </StackLayout>
+            </Border>
+        </StackLayout>
+    </Grid>
+
 </ContentPage>
