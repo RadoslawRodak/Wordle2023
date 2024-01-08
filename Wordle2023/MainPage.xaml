@@ -15,7 +15,8 @@
     </ContentPage.ToolbarItems>
 
     <!--Game Grid-->
-    <Grid x:Name="WordleGrid" Padding="1,8,8,5" VerticalOptions="CenterAndExpand">
+    <ScrollView>
+        <Grid x:Name="WordleGrid" Padding="1,8,8,5" VerticalOptions="CenterAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -74,6 +75,7 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>
+    </ScrollView>
 
     
         
