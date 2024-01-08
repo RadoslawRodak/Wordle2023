@@ -14,9 +14,12 @@ namespace Wordle2023.GameView
     {
         //load the list of words
         ListOfWords list;
+
+        //index of the current row and column
         int rowsIndex;
         int columnsIndex;
 
+        //Keyboard
         public char[] keyboard1 { get; }
         public char[] keyboard2 { get; }
         public char[] keyboard3 { get; }
@@ -24,9 +27,13 @@ namespace Wordle2023.GameView
         [ObservableProperty]
         private WordRows[] rows;
 
+
         public GameViewModel()
         {
+            //initialize the list of words
             list = new ListOfWords();
+
+            //initialize the rows of the game
             rows = new WordRows[6]
             {
                 new WordRows(),
@@ -37,6 +44,7 @@ namespace Wordle2023.GameView
                 new WordRows()
             };
 
+            //initialize the keyboard
             keyboard1 = "QWERTYUIOP".ToCharArray();
             keyboard2 = "ASDFGHJKL".ToCharArray();
             keyboard3 = "<ZXCVBNM>".ToCharArray();
@@ -44,21 +52,26 @@ namespace Wordle2023.GameView
             InitializeAsync();
         }
 
+        
         private async void InitializeAsync()
         {
+            //Generate a new word from the List
             await list.getWordList();
             GenerateWord();
-            await App.Current.MainPage.DisplayAlert("Generated Word", $"The generated word is: {new string(Word)}", "OK");
         }
 
         public bool newWord = true;
         public char[] Word;
 
+
+        
         public async void GenerateWord()
         {
+            //generate a new word
             Word = list.GenerateRandomWord().ToCharArray();
         }
 
+        //handle the input of the user
         [RelayCommand]
         public async void EnterLetter(char letter)
         {
@@ -71,11 +84,10 @@ namespace Wordle2023.GameView
             if (letter == '<')
             {
                 if (columnsIndex == 0)
-                    return;
+                return;
 
                 columnsIndex--;
                 Rows[rowsIndex].Letters[columnsIndex].Input = ' ';
-
                 return;
             }
 
@@ -84,12 +96,12 @@ namespace Wordle2023.GameView
                 return;
             }
 
-
             Rows[rowsIndex].Letters[columnsIndex].Input = letter;
             columnsIndex++;
         }
 
-            private void ResetGame()
+        // Method for reseting the game
+        private void ResetGame()
         {
             rowsIndex = 0;
             columnsIndex = 0;
@@ -106,11 +118,11 @@ namespace Wordle2023.GameView
             }
 
             GenerateWord();
-
             OnPropertyChanged(nameof(Rows));
             OnPropertyChanged(nameof(Word));
         }
 
+        // Method for handling the game end
         private void HandleGameEnd(string title, string message)
         {
             App.Current.MainPage.DisplayAlert(title, message, "OK");
@@ -123,20 +135,18 @@ namespace Wordle2023.GameView
             if (columnsIndex != 5)
                 return;
 
-            // Join the letters to form the entered word
+            // Converts the letters in the current row to a string
             var enteredWord = new string(Rows[rowsIndex].Letters.Select(l => char.ToLowerInvariant(l.Input)).ToArray()).Trim();
 
-            // Debug information
+            // Debug
             Debug.WriteLine($"Entered Word: {enteredWord}, Expected Word: {new string(Word)}");
 
-            // Check if the entered word exists in the list
+            // Check if the entered word is in the list and if the word is correct
             if (list.WordExists(enteredWord))
             {
                 var answer = Rows[rowsIndex].Validate(Word);
-
-                
+         
                 var expectedWord = new string(Word).ToLowerInvariant();
-
 
                 if (answer)
                 {
@@ -161,15 +171,15 @@ namespace Wordle2023.GameView
                 ClearCurrentLine();
             }
         }
+
+        // Method for clearing the current line
         private void ClearCurrentLine()
         {
-            // Clear the current line by setting the Input of each letter to ' '
             foreach (var letter in Rows[rowsIndex].Letters)
             {
                 letter.Input = ' ';
             }
 
-            // Optionally, reset the columnsIndex to 0 if needed
             columnsIndex = 0;
         }
     }

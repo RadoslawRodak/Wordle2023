@@ -13,31 +13,25 @@ public partial class Settings : ContentPage
 	{
 		
 		InitializeComponent();
+        //Stores the user's name in a string
         String storedText = UserData.EnteredText;
-        StoredTextLabel.Text = "Currently Logged in User: " + storedText;
-       
+        StoredTextLabel.Text = "Currently Logged in User: " + storedText;    
     }
 	
 	private void LightMode_Clicked (object sender, EventArgs e)
-	{
-        
-            // Change the color resources to light mode colors
-            BackgroundColor = Color.FromRgb(255, 255, 255);
-            Application.Current.Resources["PrimaryColor"] = Color.FromRgb(255, 255, 255);
-            Application.Current.Resources["SecondaryColor"] = Color.FromRgb(100, 100, 100);
+	{   
+        // Change the color resources to light mode colors
+        BackgroundColor = Color.FromRgb(255, 255, 255);
+        Application.Current.Resources["PrimaryColor"] = Color.FromRgb(255, 255, 255);
+        Application.Current.Resources["SecondaryColor"] = Color.FromRgb(100, 100, 100);
         Application.Current.Resources["ThirdColor"] = Color.FromRgb(0, 0, 0);
-
-
-
     }
 
 	private void DarkMode_Clicked(object sender, EventArgs e)
 	{
+        // Change the color resources to dark mode colors
         BackgroundColor = Color.FromRgb(15, 15, 15);
         Application.Current.Resources["PrimaryColor"] = Color.FromRgb(15, 15, 15);
         Application.Current.Resources["LetterColor"] = Color.FromRgb(255, 255, 255);
-
-
     }
-
 }

@@ -16,39 +16,35 @@
                 <Border WidthRequest="300" HeightRequest="150"
                 BackgroundColor="White"
                 HorizontalOptions="Center">
-
-
                     <VerticalStackLayout Spacing="3">
+                        <!--Entry for username-->
                         <Entry
-                    x:Name="UsernameEntry"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    Placeholder="Username"
-                    PlaceholderColor="Gray"
-                    TextColor="Black"              
-                        BackgroundColor="White"
-                        WidthRequest="100"
-                     />
+                            x:Name="UsernameEntry"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Placeholder="Username"
+                            PlaceholderColor="Gray"
+                            TextColor="Black"              
+                            BackgroundColor="White"
+                            WidthRequest="100"/>
 
-
+                        <!--Button for moving to game page-->
                         <Button
-                    x:Name="LoginButton"
+                            x:Name="LoginButton"
                             Padding="10,5"
-                    Margin="10,5"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    Text="Login"
-                        
-                    WidthRequest="100"
-                    FontSize="20"
-                    TextColor="White"
-                    BackgroundColor="Black"
-                    Clicked="LoginButton_Clicked">
+                            Margin="10,5"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="Login"                       
+                            WidthRequest="100"
+                            FontSize="20"
+                            TextColor="White"
+                            BackgroundColor="Black"
+                            Clicked="LoginButton_Clicked">
                         </Button>
                     </VerticalStackLayout>
                 </Border>
             </ScrollView>
-
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

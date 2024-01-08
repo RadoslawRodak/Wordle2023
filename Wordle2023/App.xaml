@@ -6,6 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
 
+            
             <Color x:Key="PrimaryColor">White</Color>
             <Color x:Key="SecondaryColor">darkGray</Color>
             <Color x:Key="ThirdColor">Black</Color>
@@ -25,7 +26,7 @@
 
             <Style x:Key="LetterButton" TargetType="Button">
                 <Setter Property="TextColor" Value="{DynamicResource ThirdColor}" />
-                <Setter Property="BackgroundColor" Value="white" />
+                <Setter Property="BackgroundColor" Value="Gray" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="BorderColor" Value="DarkGray"/>
                 <Setter Property="BorderWidth" Value="2"/>

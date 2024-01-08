@@ -6,6 +6,7 @@
         {
             InitializeComponent();
 
+            //set main page as instance of AppShell
             MainPage = new AppShell();
         }
     }

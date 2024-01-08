@@ -10,19 +10,20 @@ namespace Wordle2023
 
         public async Task getWordList()
         {
+            //check if the file exists
             if (File.Exists(savedfilelocation))
             {
                 ReadFileIntoList();
             }
             else
             {
+                //download the file if it doesn't exist
                 await DownloadFile();
                 ReadFileIntoList();
-
             }
         }
         public void ReadFileIntoList()
-        {
+        { 
             StreamReader sr = new StreamReader(savedfilelocation);
             string word = "";
             while ((word = sr.ReadLine()) != null)
@@ -33,7 +34,7 @@ namespace Wordle2023
         }
         public async Task DownloadFile()
         {
-
+            //method to download the file
             using (var httpClient = new HttpClient())
             {
                 var responseStream = await httpClient.GetStreamAsync("https://raw.githubusercontent.com/DonH-ITS/jsonfiles/main/words.txt");
@@ -45,11 +46,10 @@ namespace Wordle2023
         }
         public String GenerateRandomWord()
         {
+            //Generate a random word from the list
             Random random = new Random();
             int which = random.Next(words.Count);
             return words[which];
-
-
         }
 
         public bool WordExists(string wordToCheck)

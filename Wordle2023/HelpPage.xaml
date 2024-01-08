@@ -5,29 +5,34 @@
              Title="HelpPage"
              >
     <Grid>
-        <!-- Set the background image -->
+        <!--Set the background image -->
         <Image Source="helppage.jpg" Aspect="AspectFill" />
 
-        <VerticalStackLayout>
-            <!-- Your existing content goes here -->
+        <ScrollView>
+            <!--Explains how to play Wordle-->
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label FontAttributes="Bold" Text="How To Play Wordle" HorizontalOptions="CenterAndExpand" FontSize="50" TextColor="White" Padding="15" Margin="10"/>
 
-            <Label FontAttributes="Bold" Text="How To Play Wordle" VerticalOptions="Center" HorizontalOptions="Center" FontSize="50" TextColor="White" Padding="15"/>
-            <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="525">
-                <Label LineBreakMode="WordWrap"  FontAttributes="Bold" Text="Each guess must be a valid 5-Letter word" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25" TextColor="Black"/>
-            </Frame>
-            <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="975" Margin="10">
-            <Label FontAttributes="Bold" Text="The color of the tiles will change to show how close your guess was to the word." VerticalOptions="Fill" HorizontalOptions="Center"
-                   FontSize="25" TextColor="Black"/>
-            </Frame>
-            <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="700">
-                <Label FontAttributes="Bold" Text="Green if the letter is in the word and in the correct spot." VerticalOptions="Fill" HorizontalOptions="Center" FontSize="25" TextColor="Green"/>
-            </Frame>
-            <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="700" Margin="10" >
-           <Label FontAttributes="Bold" Text="Yellow if the letter is in the word but in the wrong spot." VerticalOptions="Fill" HorizontalOptions="Center" FontSize="25" TextColor="Goldenrod"/>
-            </Frame>
-            <Frame BackgroundColor="White" Padding="0" CornerRadius="5" HeightRequest="40" WidthRequest="600">
-                <Label FontAttributes="Bold" Text="Gray if the letter is not in the word in any spot." VerticalOptions="Fill" HorizontalOptions="Center" FontSize="25" TextColor="DimGray"/>
-            </Frame>       
-            </VerticalStackLayout>
+                <Frame Margin="5" BackgroundColor="White" CornerRadius="25" HorizontalOptions="CenterAndExpand">
+                    <Label LineBreakMode="WordWrap" FontAttributes="Bold" Text="Each guess must be a valid 5-Letter word" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Black"/>
+                </Frame>
+
+                <Frame Margin="5" BackgroundColor="White" CornerRadius="25" HorizontalOptions="CenterAndExpand">
+                    <Label FontAttributes="Bold" Text="The color of the tiles will change to show how close your guess was to the word." VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Black"/>
+                </Frame>
+
+                <Frame Margin="5" BackgroundColor="White" CornerRadius="25" HorizontalOptions="CenterAndExpand">
+                    <Label FontAttributes="Bold" Text="Green if the letter is in the word and in the correct spot." VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Green"/>
+                </Frame>
+
+                <Frame Margin="5" BackgroundColor="White" CornerRadius="25" HorizontalOptions="CenterAndExpand">
+                    <Label FontAttributes="Bold" Text="Yellow if the letter is in the word but in the wrong spot." VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="Goldenrod"/>
+                </Frame>
+
+                <Frame Margin="5" BackgroundColor="White" CornerRadius="25" HorizontalOptions="CenterAndExpand">
+                    <Label FontAttributes="Bold" Text="Gray if the letter is not in the word in any spot." VerticalOptions="Fill" HorizontalOptions="CenterAndExpand" FontSize="25" TextColor="DimGray"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>

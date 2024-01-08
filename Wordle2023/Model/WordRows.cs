@@ -9,8 +9,7 @@ public class WordRows : ObservableObject
 {
     public WordRows()
     {
-
-
+        //initialize the letters
         Letters = new Letter[5]
         {
             new Letter(),
@@ -18,10 +17,7 @@ public class WordRows : ObservableObject
             new Letter(),
             new Letter(),
             new Letter()
-
-        };
-
-        
+        };      
     }
     private Letter[] letters;
 
@@ -31,20 +27,22 @@ public class WordRows : ObservableObject
         set { SetProperty(ref letters, value); }
     }
 
-
-
-
+    //Method to Validate the word
     public bool Validate(char[] Word)
     {
         int count = 0;
         for (int i = 0; i < Letters.Length; i++)
         {
             var letter = Letters[i];
+
+            //Convert the input and Answer to upper case
             char inputUpperCase = char.ToUpperInvariant(letter.Input); // Convert input to upper case
             char expectedUpperCase = char.ToUpperInvariant(Word[i]);
 
+            //debug for checking the input and answer
             Debug.WriteLine($"Input: {letter.Input}, Expected: {Word[i]}");
 
+            //Check if the input is correct
             if (inputUpperCase == expectedUpperCase)
             {
                 
@@ -71,6 +69,7 @@ public class WordRows : ObservableObject
 
 public partial class Letter : ObservableObject
 {
+    //Declare IsCorrect, Input and Color
     private bool isCorrect;
 
     public bool IsCorrect

@@ -18,6 +18,7 @@
                     HorizontalOptions="Center">
 
                 <StackLayout Padding="0">
+                    <!--Button for switching to Light Mode-->
                     <Button Text="Light Mode"
                             Margin="20"
                             FontSize="20"
@@ -28,6 +29,7 @@
                             VerticalOptions="Center"
                             Clicked="LightMode_Clicked" />
 
+                    <!--Button for switching to Dark Mode-->
                     <Button Text="Dark Mode"
                             Margin="20"
                             FontSize="20"
@@ -39,6 +41,7 @@
                             VerticalOptions="Center"
                             Clicked="DarkMode_Clicked"/>
 
+                    <!--Prints out the name of logged in user-->
                     <Label x:Name="StoredTextLabel" WidthRequest="350" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" FontAttributes="Bold"/>
 
                 </StackLayout>
